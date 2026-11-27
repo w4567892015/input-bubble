@@ -1,0 +1,8 @@
+{
+  "uuid": "input-bubble@w4567892015",
+  "name": "Input Bubble",
+  "description": "A tiny bubble next to your pointer showing the current input source, Chewing 中/英 mode, and Caps Lock — in a macOS-like style.\n\nStays visible while you hold the switching keys (Shift / Ctrl / Alt / Super), follows the light/dark color scheme, and disappears as soon as you start typing.",
+  "shell-version": ["42"],
+  "url": "https://github.com/w4567892015/input-bubble",
+  "version": 1
+}
