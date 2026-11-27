@@ -75,7 +75,7 @@ class Extension {
             y_expand: true,
             visible: false,
         });
-        this._capsIcon.connect('repaint', this._drawCapsIcon.bind(this));
+        this._connect(this._capsIcon, 'repaint', this._drawCapsIcon.bind(this));
         this._bubble = new St.BoxLayout({
             style_class: 'lcp-bubble',
             reactive: false,
@@ -122,12 +122,18 @@ class Extension {
         for (const [obj, id] of this._signals)
             obj.disconnect(id);
         this._signals = [];
+        if (this._capsIcon) {
+            this._capsIcon.destroy();
+            this._capsIcon = null;
+        }
+        if (this._label) {
+            this._label.destroy();
+            this._label = null;
+        }
         if (this._bubble) {
             this._bubble.destroy();
             this._bubble = null;
         }
-        this._capsIcon = null;
-        this._label = null;
         this._keymap = null;
         this._ifaceSettings = null;
         this._inputSourceManager = null;
