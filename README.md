@@ -74,6 +74,18 @@ Colors, size and fonts live in `stylesheet.css`.
 
 Produces `input-bubble@w4567892015.shell-extension.zip`.
 
+## Releasing
+
+Bump `version` in `metadata.json`, commit, then push a matching tag:
+
+```sh
+git tag v2 && git push origin v2
+```
+
+The [Release workflow](.github/workflows/release.yml) builds the zip and
+publishes a GitHub release with it attached. The tag must equal
+`v<version>` or the workflow fails.
+
 This extension is not published on extensions.gnome.org; it is distributed
 only through this repository.
 
