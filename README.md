@@ -27,9 +27,20 @@ switch input source, toggle Chewing (新酷音) 中/英 mode, or press Caps Lock
 
 ## Install
 
-### From extensions.gnome.org
+### From a release zip
 
-Search for **Input Bubble** on <https://extensions.gnome.org>.
+Download `input-bubble@w4567892015.shell-extension.zip` from the
+[Releases](https://github.com/w4567892015/input-bubble/releases) page, then:
+
+```sh
+gnome-extensions install --force input-bubble@w4567892015.shell-extension.zip
+```
+
+Restart GNOME Shell (see below), then enable it:
+
+```sh
+gnome-extensions enable input-bubble@w4567892015
+```
 
 ### From source
 
@@ -55,13 +66,16 @@ Tweak the constants at the top of `extension.js`:
 
 Colors, size and fonts live in `stylesheet.css`.
 
-## Build a zip for extensions.gnome.org
+## Build the release zip
 
 ```sh
 ./pack.sh
 ```
 
 Produces `input-bubble@w4567892015.shell-extension.zip`.
+
+This extension is not published on extensions.gnome.org; it is distributed
+only through this repository.
 
 ## License
 
