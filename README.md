@@ -89,6 +89,13 @@ publishes a GitHub release with it attached. The tag must equal
 This extension is not published on extensions.gnome.org; it is distributed
 only through this repository.
 
+## AI-assisted development
+
+This extension was written with substantial help from an AI coding assistant
+(Claude). For that reason it is not submitted to extensions.gnome.org, whose
+review guidelines do not accept AI-generated extensions. Bug reports and
+patches are welcome via GitHub issues and pull requests.
+
 ## License
 
 GPL-2.0-or-later. See [LICENSE](LICENSE).
